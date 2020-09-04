@@ -42,6 +42,8 @@ const Login = (props) => {
             onChange={handleChange}
             required
           />
+          <br/>
+          <br/>
           <input
             type="password"
             name="password"
@@ -49,6 +51,8 @@ const Login = (props) => {
             onChange={handleChange}
             required
           />
+          <br/>
+          <br/>
           <button>Log in</button>
         </form>
       </div>

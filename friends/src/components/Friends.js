@@ -16,7 +16,6 @@ const Friends = () => {
     axiosWithAuth()
       .get("/api/friends")
       .then(response => {
-        console.log(response, "FRIENDS.JS GET");
         setFriends(response.data);
       })
       .catch(err => console.log(err));
@@ -29,7 +28,6 @@ const postFriend = friend => {
   axiosWithAuth()
     .post('/api/friends', friend)
     .then(res => {
-      console.log(res, "new friend post")
       setFriends([
         ...friends,
         friend
@@ -54,10 +52,14 @@ const inputChange = e => {
  
     return (
         <div>
-            <h1>Dashboard</h1>
+            <h1 className="friends_title">F-R-I-E-N-D-S</h1>
             <form onSubmit={addFriend}>
               <input type="text" name="name" onChange={inputChange} placeholder="name" required/>
+              <br/>
+              <br/>
               <input type="text" name="age" onChange={inputChange} placeholder="age" required/>
+              <br/>
+              <br/>
               <button>Add Friend</button>
             </form>
           <div>
